@@ -1,0 +1,348 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* 头部导航栏 */
+.head .menu {
+    position: fixed;
+	display: block;
+	width: 800px;
+	width: 100%;
+	height: 55px;
+    z-index: 10;
+}
+
+.head .menu li {
+	list-style: none;
+    background: #272727;
+}
+.head .menu > li {
+	background: #3C3C3C;
+    display: block;
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 25%;
+}
+
+.head .menu a {
+    color: white;
+    display: block;
+    font-family: 微软雅黑;
+    font-size: 18px;
+    line-height: 50px;
+    padding: 0 25px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.head .menu li:hover > a{
+    background-color: #272727;
+    color: #00EC00;
+    transition: 0.5s;
+}
+.head .menu li > a.selected {
+    background-color: #1c1c1c;
+    color: #00EC00;
+    transition: 0.5s;
+}
+
+/* submenu styles */
+.submenu {
+    left: 0;
+    max-height: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 0;
+	width: 100%;
+	/* 旋转出现效果 */
+    -webkit-perspective: 400px;
+    -moz-perspective: 400px;
+    -ms-perspective: 400px;
+    -o-perspective: 400px;
+    perspective: 400px;
+}
+.submenu li {
+    opacity: 0;
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+
+    -webkit-transition: opacity .4s, -webkit-transform .5s;
+    -moz-transition: opacity .4s, -moz-transform .5s;
+    -ms-transition: opacity .4s, -ms-transform .5s;
+    -o-transition: opacity .4s, -o-transform .5s;
+    transition: opacity .4s, transform .5s;
+}
+.menu .submenu a{
+    transition: 0.2s;
+}
+
+.menu .submenu li:hover a {
+    color:#0072E3;
+    transition: 0.2s;
+    background: #1c1c1c;
+}
+
+.menu > li:hover .submenu li, .menu > li:focus .submenu li {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+/* CSS3 delays for transition effects */
+.menu li:hover .submenu li:nth-child(1) {
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.menu li:hover .submenu li:nth-child(2) {
+    -webkit-transition-delay: 50ms;
+    -moz-transition-delay: 50ms;
+    -ms-transition-delay: 50ms;
+    -o-transition-delay: 50ms;
+    transition-delay: 50ms;
+}
+.menu li:hover .submenu li:nth-child(3) {
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    -ms-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+
+
+.submenu li:nth-child(1) {
+    -webkit-transition-delay: 550ms;
+    -moz-transition-delay: 550ms;
+    -ms-transition-delay: 550ms;
+    -o-transition-delay: 550ms;
+    transition-delay: 550ms;
+}
+.submenu li:nth-child(2) {
+    -webkit-transition-delay: 400ms;
+    -moz-transition-delay: 400ms;
+    -ms-transition-delay: 400ms;
+    -o-transition-delay: 400ms;
+    transition-delay: 400ms;
+}
+.submenu li:nth-child(3) {
+    -webkit-transition-delay: 250ms;
+    -moz-transition-delay: 250ms;
+    -ms-transition-delay: 250ms;
+    -o-transition-delay: 250ms;
+    transition-delay: 250ms;
+}
+
+/* 滚动出现锚点 */
+#top{
+    position: fixed;
+    right: 2%;
+    top: 85%;
+    display: none;
+    transition-duration: 0.5s;
+}
+#top:hover{
+    cursor:pointer;
+    transform: rotate(-10deg); 
+    transition-duration: 0.5s;
+}
+
+/* 第一页：个人信息 */
+.introduce{
+    text-align: center;
+    background: #66B3FF;
+    overflow: hidden;
+}
+.introduce img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: 150px;
+    box-shadow: 2px 2px 5px 2px gray; 
+    transition:All 0.4s ease-in-out;
+}
+.introduce img:hover{
+    transform: rotate(360deg);
+}
+.introduce  p{
+    padding: 5px 0;
+    font-size: 18px;
+    font-family: 微软雅黑;
+}
+.introduce  p:nth-child(2){
+    font-size: 40px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.introduce span.university_icon{
+    width: 40px;
+    height: 38px;
+    overflow: hidden;
+    display: inline-block;
+    background: url('../images/university.png');
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+
+/* 第二页，技能掌握情况 */
+.technology{
+   background: #B3D9D9;
+   overflow: hidden;
+   height: 100%;
+}
+.technology p.tech_title{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 45px;
+    font-family: 微软雅黑;
+    letter-spacing: 1px;
+}
+.technology .technology_percent{
+    margin-left: 100px;
+}
+.technology .technology_percent p{
+    padding: 10px 10px;
+    margin: 20px 0;
+    font-size: 18px;
+    font-family: 微软雅黑;
+}
+.technology .technology_percent p span.percent{
+    margin-left: 30%;
+}
+.technology .technology_percent p:nth-child(1){
+    width: 80%;
+    color: #D8D8EB;
+    background:#7373B9;
+    border-left: 4px solid  #AE57A4;
+}
+
+.technology .technology_percent p:nth-child(2){
+    width: 65%;
+    color: #004B97;
+    background: #66B3FF;
+    border-left: 4px solid  #4A4AFF;
+}
+.technology .technology_percent p:nth-child(3){
+    width: 60%;
+    color: #004B97;
+    background: #66B3FF;
+    border-left: 4px solid  #4A4AFF;
+}
+.technology .technology_percent p:nth-child(4){
+    width: 55%;
+    color:  #7E3D76;
+    background: #81C0C0;
+    border-left: 4px solid  #46A3FF;
+}
+.technology .technology_percent p:nth-child(5){
+    width: 50%;
+    color:  #64A600;
+    background: #AAAAFF;
+    border-left: 4px solid #007979;
+}
+.technology .technology_percent p:nth-child(6){
+    width: 45%;
+    color:  #3D7878;
+    background: #9999CC;
+    border-left: 4px solid  #7E3D76;
+}
+.technology .notes{
+    margin-left: 100px;
+}
+.technology .notes p{
+    padding: 10px 0;
+    transition: all .3s ease-in-out;
+}
+.technology .notes p:hover{
+    color: #fff;
+    background: rgba(255, 106, 106, 0.5);
+}
+
+/* 第三页：实习经历及项目展示 */
+.project{
+    background: #84C1FF;
+    padding-top: 50px;
+    text-align: center;
+    overflow: hidden;
+}
+.project > p{
+    text-align: center;
+    font-size: 40px;
+    font-family: 微软雅黑;
+}
+.project a {
+    display: block;
+}
+.project .demo1,.project .demo2{
+    margin: 50px 100px 0;
+    display: inline-block;
+    position: relative;
+}
+.project .demo1 img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.project .demo2 img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.project span{
+    opacity: 0;
+    position:absolute;
+    left:20px;
+    top:20px;
+    filter:alpha(opacity=0);
+    transition:1s;
+    z-index:2;
+}
+.project img:hover{
+    opacity: 0.4;
+}
+
+/* 第四页：关于我 */
+.contact{
+    background: #02DF82;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.contact p{
+    font-size: 20px;
+    font-family: 微软雅黑;
+    padding: 5px 0;
+    position: relative;
+    top: 30%;
+}
+.contact img{
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+}
+.contact img:hover{
+    opacity: 0.9;
+}
+.contact p:nth-child(4){
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.contact span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    font-family: 微软雅黑;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<!-- 头部导航栏 -->
+	<div class="head">
+		<ul class="menu">
+		    <li><a href="./index.html" class="selected">自我介绍</a></li>
+		    <li><a href="#technology">我的技能</a></li>
+		    <li><a href="#project">我的项目</a></li>
+		    <li><a href="#contact">联系我</a>
+				<ul class="submenu">
+		            <li><a href="javascript:void(0)">手机</a></li>
+		            <li><a href="javascript:void(0)">QQ</a></li>
+		            <li><a href="javascript:void(0)">邮箱</a></li>
+		        </ul>
+		    </li>
+		</ul>
+	</div>
+
+	<!-- 第一页：个人信息 -->
+	<div class="introduce">
+		<img src="images/logo.png" />
+		<p class="wow fadeInUp" data-wow-duration="1.5s">张严伟</p>
+		<p class="wow fadeInLeft" data-wow-duration="1.5s">性别：男</p>
+		<p class="wow fadeInRight" data-wow-duration="1.5s">应聘职位：Web前端工程师</p>
+		<p class="wow fadeInUp" data-wow-delay="1s">毕业院校：河北大学工商学院<span class="university_icon"></span></p>
+	</div>
+
+	<!-- 第二页，技能掌握情况 -->
+	<div class="technology" id="technology">
+		<p class="tech_title">我的技能</p>
+		<div class="notes" style="margin-top: 30px;">
+			<p class="wow fadeInLeft" data-wow-delay="0.2s" data-wow-duration="1.5s">
+				1、熟练掌握 html css，熟悉 H5 和 CSS3 的新特性，能对不同浏览器做适当兼容和响应式布局
+			</p>
+			<p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="1.5s">
+				2、熟练使用js，会写常用业务逻辑，模块封装
+			</p>
+			<p class="wow fadeInLeft" data-wow-delay="0.2s" data-wow-duration="1.5s">
+				3、熟练使用Ajax，能配合后端提供的API接口做数据交互
+			</p>
+			<p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="1.5s">
+				4、熟练使用JQuery，能编写常用特效和组件
+			</p>
+			<p class="wow fadeInLeft" data-wow-delay="0.2s" data-wow-duration="1.5s">
+				5、熟悉echarts，能利用后台接口编写常用类型的动态图表
+			</p>
+			<p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="1.5s">
+				6、了解 Vue2 和 Mui，如果公司需要能够尽快上手，了解组件化开发和单页面应用
+			</p>
+			<p class="wow fadeInLeft" data-wow-delay="0.2s" data-wow-duration="1.5s">
+				6、了解 ES6，熟悉常用语法糖
+			</p>
+			<p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="1.5s">
+				6、了解前端自动化构建工具 webpack 和 gulp
+			</p>
+		</div>
+	</div>
+
+	<!-- 第三页：项目展示 -->
+	<div class="project" id="project">
+		<p class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1.5s">项目展示：</p>
+		<div class="demo1 wow fadeInLeft" data-wow-delay="0.2s" data-wow-duration="1.5s">
+			<a href="http://hcjp5.xyz/ningxia" target="_blank" title="宁夏大屏环境数据中心"><img src="images/map.png" /></a>
+		</div>
+		<div class="demo2 wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="1.5s">
+			<a href="http://hcjp5.xyz/pra" target="_blank" title="练习页面"><img src="images/pra.png" /></a>
+		</div>
+	</div>
+
+	<!-- 第四页：联系我 -->
+	<div class="contact" id="contact">
+		<p class="wow fadeInDown">手机：15309210379</p>
+		<p class="wow fadeInDown">QQ：317797468</p>
+		<p class="wow fadeInUp">QQ邮箱：317797468@qq.com</p>
+		<p class="wow fadeInUp"><a href="./my.pdf">简历下载</a></p>
+		<span class="wow fadeInUp">Copyright © 2015 河大新区资源应用平台 版权所有，All Rights Reserved</span>
+	</div>
+
+	<!-- 滚动出现锚点 -->
+	<div id="top">
+		<img src="images/arrow-top.png" width="80" height="70" />
+	</div>
+
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.singlePageNav.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/my.js"></script>
+
+</body>
+</html>
